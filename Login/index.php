@@ -8,88 +8,114 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Register Daniel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/mycss.css" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="assets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!--===============================================================================================-->
 </head>
-
 <body>
-    <main>
-        <div class="contenedor__todo">
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('assets/images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form action="php/login_usuario_be.php" method="POST" class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						Login
+					</span>
 
-            <div class="caja__trasera">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="correo" placeholder="Type your email">
+						<span class="focus-input100" data-symbol="&#xf15a;"></span>
+					</div>
 
-                <!--Caja de login-->
-                <div class="caja__trasera-login">
-                    <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesi&oacute;n</p>
-                    <button id="btn__iniciar-sesion">Iniciar sesi&oacute;n</button>
-                </div>
-
-                <!--Caja de registro-->
-                <div class="caja__trasera-register">
-                    <h3>¿A&uacute;n tienes una cuenta?</h3>
-                    <p>Registrate para que puedas acceder</p>
-                    <button id="btn__registrarse">Registrate</button>
-                </div>
-            </div>
-            <div class="contenedor__login-register">
-
-                <!--Formulario de login-->
-                <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
-                    <h2>Iniciar sesión</h2>
-                    <input type="text" placeholder="Correo electronico" name="correo"/>
-                    <input type="password" placeholder="Contraseña" name="contrasena"/>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="recuperacontra.php">Recupera contraseña</a>
-                        </li>
-                    </ul>
-                    <button>Entrar</button>
-                </form>
-
-                <!--Formulario de registro-->
-                <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
-                    <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo" name="nombre_completo"/>
-                    <input type="text" placeholder="Correo electronico" name="correo"/>
-                    <input type="text" placeholder="Usuario" name="usuario"/>
-                    <input type="password" placeholder="Contraseña" name="contrasena"/>
-                    <button>Registrarse</button>
-                </form>
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="contrasena" placeholder="Type your password">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					
+					<div class="text-right p-t-8 p-b-31">
+						<a href="recuperacontra.php">
+							Forgot password?
+						</a>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
 
 
-            </div>
 
-        </div>
+					<div class="flex-c-m p-t-10">
 
-    </main>
-    <script src="assets/js/script.js"></script>
+						<a href="#" class="login100-social-item bg3 ">
+							<i class="fa fa-google"></i>
+						</a>
+					</div>
+
+					<div class="flex-col-c p-t-10">
+						<span class="txt1 p-b-17">
+							Or Sign Up Using
+						</span>
+
+						<a href="singup.php" class="txt2">
+							Sign Up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/js/main.js"></script>
+
 </body>
-
 </html>
-

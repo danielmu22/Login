@@ -7,7 +7,7 @@
 
     $correo = $_POST['correo'];
 
-    $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'");
+    $validar_login = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo='$correo'");
 
 
     if(mysqli_num_rows($validar_login) > 0){

@@ -15,7 +15,7 @@ $code = basename($url_completa);
 
     if(mysqli_num_rows($ejecutar) > 0){
 
-        $sql2 = "UPDATE usuarios SET contrasena = '$contrasena' WHERE correo = (SELECT correo FROM cambiocontrasena WHERE codigo='$code')";
+        $sql2 = "UPDATE usuario SET contrasena = '$contrasena' WHERE correo = (SELECT correo FROM cambiocontrasena WHERE codigo='$code')";
         $ejecutar2 = mysqli_query($conexion, $sql2);
         $sql3 = "DELETE FROM cambiocontrasena WHERE codigo='$code' ";
         $ejecutar3 = mysqli_query($conexion, $sql3);
