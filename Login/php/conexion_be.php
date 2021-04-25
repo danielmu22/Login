@@ -1,6 +1,6 @@
 <?php
 
-    $conexion = mysqli_connect("localhost", "root", "", "login_register_db");
+    $conexion = mysqli_connect("b5qclgo1ccq5lxfzgffx-mysql.services.clever-cloud.com", "ugkl99bmptjy1irm", "Z10ZdmOtOotOUeDyZiBn", "b5qclgo1ccq5lxfzgffx");
 
     /*
     if($conexion){
